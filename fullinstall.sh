@@ -1,7 +1,7 @@
 #!/bin/bash
 # Install dependencies
-sudo apt-get update
-sudo apt-get install -y \
+sudo apt  update -y
+sudo apt install -y \
     git \
     python3-pip \
     build-essential \
@@ -13,8 +13,7 @@ sudo apt-get install -y \
     libssl-dev \
     libffi-dev \
     libltdl-dev \
-    libncurses5-dev \
-    libsqlite3-dev \
+    libncurses-dev \
     libbz2-dev \
     libreadline-dev \
     libffi-dev \
@@ -38,7 +37,7 @@ sudo apt-get install -y \
     libgstreamer1.0-dev \
     libgstreamer-plugins-base1.0-dev \
     python3-dev \
-    openjdk-8-jdk \
+    default-jdk \
     ant \
     wget
 
@@ -53,4 +52,6 @@ cd buildozer
 
 # Install Buildozer
 python3 setup.py install
+
+python3 -m pip install kivy
 
